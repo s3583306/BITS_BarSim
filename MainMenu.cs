@@ -10,15 +10,25 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1); // Enters Game
     }
 
+    public void FeatureUnavailable()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+2); // Feature Unavailable Message
+    }
+
     public void QuitGame()
     {
-        Debug.Log("QUIT!"); // Quit Game Log Message
-        Application.Quit(); // Quit Game
+        Debug.Log("QUIT!"); // Log Message Quit
+        Application.Quit(); // Quits Game
     }
 
     public void BackPrevious()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1); // Back to previous Menu
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1); // Back to Previous Menu
+    }
+
+    public void BackToMain()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-2); // Back to Main Menu
     }
 }
 
